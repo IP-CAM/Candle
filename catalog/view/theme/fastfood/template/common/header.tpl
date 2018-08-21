@@ -99,6 +99,7 @@
 			</div>
 			<div>
 				<ul>
+				    <li class="user"><i class="fa fa-book" title="Информация" onclick="location='info'"></i></li>
 					<?php if (isset($show_search)) { ?><li class="search hidden-xs"><i class="fa fa-search" title="Показать строку поиска по сайту"></i></li><?php } ?>
 					<?php if (isset($show_account)) { ?><li class="user"><i class="fa fa-user" title="Перейти на страницу авторизации/регистрации" onclick="location='index.php?route=account/account'"></i></li><?php } ?>
 					<?php echo $language; ?>

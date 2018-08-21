@@ -19,6 +19,8 @@
 	<input type="radio" name="customer_reason" value="<?php echo $text_reason3; ?>" id="reason3" onchange="$('.callback .mail, .callback .comment').addClass('show')" /><label for="reason3"></label><label for="reason3"><?php echo $text_reason3; ?></label>
 <?php } ?>
 </div>
+<div style="font-size: 10px"><br>Нажимая на кнопку, Вы даете согласие на обработку своих персональных данных 
+<br><a href="/privacy" target="_blank" style="font-size: 10px">Политика конфиденциальности</a></div>
 </div>
 <div><input type="button" value="Отправить" class="button callback_button" onclick="send_callback();" /></div>
 </div>

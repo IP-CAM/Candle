@@ -26,8 +26,7 @@
       <?php } ?>
 	  <div class="desc">
       <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
-      <div class="description"><?php echo $product['short_description']; ?></div>
-		<!-- options -->
+      <!-- options -->
 		<?php if ($show_options) { ?>
 			<div id="option_<?php echo $product['product_id']; ?>" class="option">
 				<?php foreach ($product['options'] as $key => $option) { ?>
@@ -111,8 +110,7 @@
 		<input type="button" value="<?php echo $button_cart_disabled; ?>" class="button disabled" />
 	<?php } ?>
     </div>
-     <div class="wishlist"><a onclick="addToWishList('<?php echo $product['product_id']; ?>');" title="<?php echo $button_wishlist; ?>"><i class="fa fa-heart"></i></a></div>
-      <div class="compare"><a onclick="addToCompare('<?php echo $product['product_id']; ?>');" title="<?php echo $button_compare; ?>"><i class="fa fa-bar-chart-o"></i></a></div></div>
+    </div>
     </div>
     <?php } ?>
     </div>

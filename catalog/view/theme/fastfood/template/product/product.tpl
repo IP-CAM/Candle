@@ -23,7 +23,7 @@
       <?php } ?>
       <?php if ($images) { ?>
       <div class="image-additional">
-	<img src="<?php echo $small; ?>" data-thumb="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
+	<!-- <img src="<?php echo $small; ?>" data-thumb="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /> -->
         <?php foreach ($images as $image) { ?>
         <a href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $image['thumb']; ?>" data-popup="<?php echo $image['popup']; ?>" data-thumb="<?php echo $image['small']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a>
         <?php } ?>
@@ -34,9 +34,15 @@
     <div class="right">
 	<h1><?php echo $heading_title; ?></h1>
 	<div>
-		<!-- <div class="description">
-			<div><span><?php echo $text_description; ?></span><?php echo utf8_substr(strip_tags(html_entity_decode($description, ENT_QUOTES, 'UTF-8')), 0, 199); ?>... <?php if(mb_strlen($description,'utf-8') > 199) { ?><a onclick="scroll_to('#tabs')">Подробнее</a><?php } ?></div>
-			<?php if ($weight) { ?><div><span><?php echo $text_weight; ?></span><span class="weight_<?php echo $product_id; ?>" data-weight="<?php echo $weight_value; ?>" data-weight-unit="<?php echo $weight_unit; ?>"><?php echo $weight; ?></span></div><?php } ?> -->
+		<div class="description">
+		<p><i class="fa fa-check-square-o" aria-hidden="true" style="color: #eb4f1a"></i></i> <span>100% оригинальная продукция</span></p>
+        <p><i class="fa fa-certificate" aria-hidden="true" style="color: #eb4f1a"></i> <span>Сертифицированный дилер</span></p>
+        <p><i class="fa fa-clock-o" aria-hidden="true" style="color: #eb4f1a"></i> <span>9 лет на рынке котлов</span></p>
+        <p><i class="fa fa-thumbs-o-up" aria-hidden="true" style="color: #eb4f1a"></i> <span>Гарантия лучшей цены</span></p>
+        <p><i class="fa fa-shield" aria-hidden="true" style="color: #eb4f1a"></i> <span>Техническая поддержка</span></p>
+        <p><i class="fa fa-male" aria-hidden="true" style="color: #eb4f1a"></i> <span>Индивидуальный менеджер</span></p>
+        <p><i class="fa fa-percent" aria-hidden="true" style="color: #eb4f1a"></i></i> <span>Скидки и акции от производителя</span></p>
+        <p><i class="fa fa-question-circle" aria-hidden="true" style="color: #eb4f1a"></i> <span><a href="javascript:jivo_api.open();">Остались вопросы?</a></span></p>
 		</div>
 	<?php if ($options) { ?>
       <div class="options">
@@ -222,11 +228,11 @@
       </div>
       <?php } ?>
 	  </div>
-	  <div class="product_banners">
+	  <!--<div class="product_banners">
 	  <div><?php echo $product_banner1; ?></div>
 	  <div><?php echo $product_banner2; ?></div>
 	  <div><?php echo $product_banner3; ?></div>
-	  </div>
+	  </div> -->
     </div>
   </div>
   
@@ -334,7 +340,6 @@
       <?php } ?>
 	  <div class="desc">
 		<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
-		<div class="description"><?php echo $product['description']; ?></div>
 		<!-- options -->
 		<?php if ($show_options) { ?>
 			<div id="option_<?php echo $product['product_id']; ?>" class="option">
@@ -419,8 +424,7 @@
 		<input type="button" value="<?php echo $button_cart_disabled; ?>" class="button disabled" />
 	<?php } ?>
     </div>
-     <div class="wishlist"><a onclick="addToWishList('<?php echo $product['product_id']; ?>');" title="<?php echo $button_wishlist; ?>"><i class="fa fa-heart"></i></a></div>
-      <div class="compare"><a onclick="addToCompare('<?php echo $product['product_id']; ?>');" title="<?php echo $button_compare; ?>"><i class="fa fa-bar-chart-o"></i></a></div></div>
+    </div>
     </div>
       <?php } ?>
     </div>

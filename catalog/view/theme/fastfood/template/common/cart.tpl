@@ -64,6 +64,8 @@
 	<?php if($order_comment) { ?>
 		<div><textarea placeholder="<?php echo $order_comment_text; ?>" name="customer_comment"></textarea></div>
 	<?php } ?>
+	    <div style="font-size: 10px">Нажимая на кнопку, Вы даете согласие на обработку своих персональных данных
+	    <br><a href="/privacy" target="_blank" style="font-size: 10px">Политика конфиденциальности</a></div>
 		<div class="quick_order_button"><input type="button" value="Отправить заказ" class="button"	<?php if(!isset($quick_order_function)) { ?>onclick="send_quick_order();"<?php } else { ?>onclick="add_quick_order();"<?php } ?>/></div>
 	</div>
 	<?php } ?>

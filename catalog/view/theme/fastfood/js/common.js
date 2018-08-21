@@ -137,7 +137,12 @@ $(document).ready(function() {
 	
 	$('body').on('click', '.success .close', function() {
 		$('.success').remove();
-	})
+	});	
+
+	$('#phone').click(function(e){
+       $(this).toggleClass('active_phone');
+       e.preventDefault();	
+ 	});
 });
 
 function menu() {

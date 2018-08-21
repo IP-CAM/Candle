@@ -117,20 +117,10 @@ label{cursor:pointer}
 #header #phone{line-height:1.2em;font-size:1.2em;font-weight:500;color:#555;padding-top:10px;text-align:right;}
 #header #phone > div:nth-child(1){cursor:pointer;font-size:1.1em;color:#888}
 #header #phone > div i{vertical-align:middle;margin:-4px 0 0 5px;font-size:0.7em;color:#eb4f1a;transition:all ease-in-out .2s}
-/*#header #phone:hover > div > i{transform:rotate(180deg)}*/
+#header #phone:hover > div > i{transform:rotate(180deg)}
 #header #phone .dropdown{opacity:0;visibility:hidden;right:0;margin:10px 0 0;min-width:180px;background:#eee;position:absolute;z-index:1000;padding:4px 7px 4px;text-align:left;border-radius:4px;box-shadow:0 1px 1px #999;transition:all ease-in-out .2s;transform:translateX(0) translateY(20%);-o-transform:translateX(0) translateY(20%);-moz-transform:translateX(0) translateY(20%);-webkit-transform:translateX(0) translateY(20%)}
 #header #phone .dropdown:before{border:solid;border-color:#eee transparent;border-width:0px 6px 6px 6px;top:-6px;content:"";right:50%;margin-left:-6px;position:absolute;z-index:999}
-/*#header #phone:hover .dropdown{opacity:1;visibility:visible;display:block;transform:translateX(0) translateY(0);-o-transform:translateX(0) translateY(0);-moz-transform:translateX(0) translateY(0);-webkit-transform:translateX(0) translateY(0)}*/
-#header #phone.active_phone .dropdown{
-opacity: 1;
-visibility: visible;
-display: block;
-transform: translateX(0) translateY(0);
--o-transform: translateX(0) translateY(0);
--moz-transform: translateX(0) translateY(0);
--webkit-transform: translateX(0) translateY(0)
-}
-#header .active_phone > div > i{transform:rotate(180deg)}
+#header #phone:hover .dropdown{opacity:1;visibility:visible;display:block;transform:translateX(0) translateY(0);-o-transform:translateX(0) translateY(0);-moz-transform:translateX(0) translateY(0);-webkit-transform:translateX(0) translateY(0)}
 #header #phone .dropdown div{margin:4px 0 2px;border-top:solid 1px #ddd;border-bottom:solid 1px #fefefe}
 #header #phone .dropdown span{display:block;font-weight:400;line-height:2.0em;font-size:0.75em;color:#777;text-shadow:0 1px 0 #fefefe;}
 #header #phone .dropdown i{vertical-align:top;font-size:1.3em;min-width:20px;text-align:center;margin:4px 5px 0 0;}
@@ -249,7 +239,7 @@ ul.box-filter input[type='checkbox']:checked + label{background:#eb4f1a;border:s
 .manufacturer-heading{background:#F8F8F8;font-size:15px;font-weight:700;padding:5px 8px;margin-bottom:6px}
 .manufacturer-content{padding:8px}
 .manufacturer-list ul{float:left;width:25%;margin:0;padding:0;list-style:none;margin-bottom:10px}
-.product-filter{background:#f5f5f5;padding:5px;overflow-x:hidden;margin-bottom:20px;border-radius:3px;border:solid 1px rgba(0, 0, 0, .08);}
+.product-filter{background:#f5f5f5;padding:5px;overflow:auto;margin-bottom:20px;border-radius:3px;border:solid 1px rgba(0, 0, 0, .08);}
 .product-filter .display{margin-right:15px;float:left;padding-top:4px;color:#333;display:none}
 .product-filter .display a{font-weight:700}
 .product-filter .sort{float:left;margin:0 30px 0 0;}
@@ -324,7 +314,7 @@ ul.box-filter input[type='checkbox']:checked + label{background:#eb4f1a;border:s
 .product-info .sticker.st_special{background:#eb4f1a;}
 .product-info .left{position:relative;float:left;width:38%;padding:0 10px 0 0;box-shadow:10px 2px 20px -10px #ccc;}
 .product-info .right{position:relative;float:left;width:62%;padding:0 0 0 10px}
-.product-info .right h1{margin:-3px 0 0;padding:0 0 8px;border-bottom:solid 1px #ddd;}
+.product-info .right h1{margin:-5px 0 0;padding:0 0 8px;border-bottom:solid 1px #ddd;}
 .product-info .right > div:nth-child(2){width:57%;height:100%;min-height:232px;float:left;padding:0 15px 0 5px;box-shadow:10px 2px 20px -10px #ccc}
 .product-info .right > div:nth-child(3){width:43%;float:left;padding:0 0 0 20px;}
 .product-info .image{text-align:center;border:solid 1px #eee;}
@@ -455,7 +445,7 @@ ul.box-filter input[type='checkbox']:checked + label{background:#eb4f1a;border:s
 .attribute{border-collapse:collapse;width:100%;border-top:1px solid #ddd;border-left:1px solid #ddd;margin-bottom:20px}
 .attribute thead td, .attribute thead tr td:first-child{font-weight:700;background:#F7F7F7;text-align:left}
 .attribute tr td:first-child{font-weight:700;text-align:right;width:20%}
-.attribute td{padding:7px;text-align:center;vertical-align:center;border-right:1px solid #ddd;border-bottom:1px solid #ddd}
+.attribute td{padding:7px;text-align:center;vertical-align:top;border-right:1px solid #ddd;border-bottom:1px solid #ddd}
 .content_search{margin:0 0 20px;border-bottom:solid 2px #ddd;}
 .content_search p > *{display:inline-block;vertical-align:middle}
 .content_search p > input[type='checkbox']{margin:0 0 0 15px;}
@@ -572,9 +562,9 @@ ul.box-filter input[type='checkbox']:checked + label{background:#eb4f1a;border:s
 .pagination li.active{display:inline-block;border:1px solid transparent;padding:4px 10px;font-weight:400;text-decoration:none;color:#fff;background:#eb4f1a;background:linear-gradient(to bottom, #ea8462 0%,#eb4f1a 100%);border-radius:4px;margin:0 4px 0 0}
 .pagination li.active span, .pagination li.active:hover span{margin:0;padding:0;line-height:normal;background-color:transparent;border:none;}
 .pagination .results{float:right;padding-top:3px;display:none}
-#footer{clear:both;overflow:hidden;position:relative;max-height:105px;margin-top:-90px;padding:10px 0 8px;background:linear-gradient(to bottom, #555 0%,#000000 100%);color:#fff;border-top:solid 1px #000000;text-shadow:-1px -1px 0 #000000}
-#footer a{color:#fff;font-size:12px}
-#footer .menu_phone{overflow:auto;padding:0 0 13px;border-bottom:solid 1px #aaa}
+#footer{clear:both;overflow:hidden;position:relative;max-height:90px;margin-top:-90px;padding:10px 0 8px;background:linear-gradient(to bottom, #ea8462 0%,#eb4f1a 100%);color:#fff;border-top:solid 1px #eb4f1a;text-shadow:-1px -1px 0 #eb4f1a}
+#footer a{color:#fff}
+#footer .menu_phone{overflow:auto;padding:0 0 13px;border-bottom:solid 1px #eb4f1a}
 #footer .menu{float:left}
 #footer .menu a{float:left;text-decoration:none;font-size:1.2em;font-weight:400;color:#eee}
 #footer .menu a:hover, #footer .menu a.active{color:#d5d5d5}
